@@ -48,7 +48,7 @@
             <h2>Confirma tu asistencia</h2>
             <form id="rsvp-form">
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" placeholder="Pon tu Nombre y Apellidos">
+                <input type="text" id="name" name="name" placeholder="Pon tu Nombre y Apellidos" required>
                 <label for="guests">Número de acompañantes:</label>
                 <select id="guests" name="guests" required>
                     <option value="">Selecciona una opción</option>
@@ -61,17 +61,12 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                 </select>
-                <button type="submit">Enviar</button>
+                <h2>Añade la canción que más te guste</h2>
+                <label for="song-name">Nombre de la Canción:</label>
+                <input type="text" id="song-name" name="song-name" placeholder="Nombre de la Canción" required>
+                <label for="song-artist">Nombre del Artista:</label>
+                <input type="text" id="song-artist" name="song-artist" placeholder="Nombre del Artista" required>
             </form>
-        </div>
-        <div class="music">
-            <h2>Lista de Canciones</h2>
-            <p><strong>¿Quieres añadir una canción a nuestra lista que sonará en la fiesta?</strong></p>
-            <ul id="song-list">
-                <!-- Lista de canciones aquí -->
-            </ul>
-            <input type="text" id="song-input" placeholder="Añade Nombre y Artista de la canción que más te guste">
-            <button id="add-song-button">Añadir Canción</button>
         </div>
         <div class="extra-info">
             <h2>Información Adicional</h2>
@@ -122,8 +117,8 @@
                         <input type="radio" id="bus-navalmoral-no" name="bus-navalmoral" value="no">
                         <label for="bus-navalmoral-no">No</label>
                     </div>
-                    <button type="submit">Enviar</button>
                 </form>
+                <button id="submit-all">Enviar toda la información</button>
             </div>
         </div>
     </div>
@@ -134,10 +129,36 @@
             <p>“El mejor momento para amar es siempre el ahora.”</p>
             <div class="tenor-gif-embed" data-postid="10159440" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/hearts-gif-10159440">Hearts GIF</a>from <a href="https://tenor.com/search/hearts-gifs">Hearts GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
         </div>
-    </div>
-    
-    
-    
+    </div>    
     <script src="boda.js"></script>
+    <script>
+        document.getElementById('submit-all').addEventListener('click', function() {
+            const rsvpForm = document.getElementById('rsvp-form');
+            const busSurveyForm = document.getElementById('bus-survey-form');
+            
+            const rsvpData = new FormData(rsvpForm);
+            const busSurveyData = new FormData(busSurveyForm);
+            
+            const combinedData = {};
+            
+            rsvpData.forEach((value, key) => {
+                combinedData[key] = value;
+            });
+            
+            busSurveyData.forEach((value, key) => {
+                combinedData[key] = value;
+            });
+            
+            fetch('https://formspree.io/f/https://script.google.com/macros/s/AKfycbz3iiFW2WpNIg2ifJ4LtUYUmi5zCeoIt5wVrBBZ52AKSfJG_mJ63vwGEjn0Fl4jSyUa/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(combinedData)
+            }).then(response => response.text())
+              .then(data => alert('Formulario enviado exitosamente!'))
+              .catch(error => alert('Hubo un error al enviar el formulario.'));
+        });
+    </script>
 </body>
 </html>
