@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const songInput = document.getElementById('song-input');
     const countdownElement = document.getElementById('countdown');
     const weddingMusic = document.getElementById('wedding-music');
 
@@ -48,4 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const countdownInterval = setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call to display countdown immediately
+});
+
+document.getElementById('submit-all').addEventListener('click', function() {
+    const rsvpForm = document.getElementById('rsvp-form');
+    const busSurveyForm = document.getElementById('bus-survey-form');
+    
+    const rsvpData = new FormData(rsvpForm);
+    const busSurveyData = new FormData(busSurveyForm);
+    
+    const combinedData = {};
+    
+    rsvpData.forEach((value, key) => {
+        combinedData[key] = value;
+    });
+    
+    busSurveyData.forEach((value, key) => {
+        combinedData[key] = value;
+    });
+    
+    fetch('https://script.google.com/macros/s/AKfycbwaLy-BTEH9uQIYk0Tj_q1_-W22coJqgU79zqGqVcCivAvBLPwwifHaoyGM_jQhPKtv/exec', { 
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(combinedData)
+    }).then(response => response.text())
+      .then(data => alert('Formulario enviado exitosamente!'))
+      .catch(error => alert('Hubo un error al enviar el formulario.'));
 });
