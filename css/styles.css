@@ -1,0 +1,379 @@
+body {
+    font-family: 'Georgia', serif;
+    background: url('floral-background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+}
+
+.bordered-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #6B8E23;
+    padding: 30px;
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #6B8E23;
+    padding: 30px;
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.intro h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 4em;
+    color: #556B2F;
+    margin: 0.2em;
+}
+
+.intro h2 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3em;
+    color: #556B2F;
+    margin: 0.2em;
+}
+
+.intro h3 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2.5em;
+    color: #556B2F;
+    margin: 0.2em;
+}
+
+.intro h4 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2em;
+    color: #556B2F;
+    margin: 0.2em;
+}
+
+.intro .quote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: 2px solid #556B2F;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.intro .quote p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5em;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.intro .quote .heart {
+    color: #556B2F;
+    font-size: 1.5em;
+}
+
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.scroll-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #556B2F;
+    background-color: #ffffff;
+    color: #556B2F;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.scroll-button:hover {
+    background-color: #556B2F;
+    color: #ffffff;
+}
+
+.scroll-down p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #4a4a4a;
+    font-family: 'Georgia', serif;
+}
+
+.invitation {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #6B8E23;
+}
+
+.header h1 {
+    font-family: 'Brush Script MT', cursive;
+    color: #556B2F;
+    font-size: 3em;
+    margin: 0 0 20px;
+}
+
+.details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #5e5e5e;
+}
+
+#map-link {
+    color: #556B2F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#map-link:hover {
+    text-decoration: underline;
+}
+
+#countdown {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #556B2F;
+}
+
+form {
+    margin-top: 30px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 15px 30px;
+    background: #556B2F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #6B8E23;
+}
+
+.music {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.music h2 {
+    font-family: 'Brush Script MT', cursive;
+    color: #556B2F;
+    font-size: 2.5em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+#song-input {
+    width: calc(100% - 120px);
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#add-song-button {
+    width: 100px;
+    display: inline-block;
+    padding: 10px;
+    background: #556B2F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#add-song-button:hover {
+    background: #6B8E23;
+}
+
+.extra-info {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.extra-info h2 {
+    font-family: 'Brush Script MT', cursive;
+    color: #556B2F;
+    font-size: 2.5em;
+}
+
+.extra-info p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #5e5e5e;
+}
+
+.extra-info a {
+    color: #556B2F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.extra-info a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la nueva sección del autobús */
+.bus-info {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #6B8E23;
+}
+
+.bus-header h2 {
+    font-family: 'Brush Script MT', cursive;
+    color: #556B2F;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.bus-details {
+    font-size: 1.2em;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.bus-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bus-details li {
+    margin: 10px 0;
+}
+
+.bus-icon img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.bus-surveys {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.bus-surveys h3 {
+    font-family: 'Brush Script MT', cursive;
+    color: #556B2F;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.bus-surveys label {
+    font-size: 1.2em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.bus-surveys button {
+    padding: 10px 20px;
+    background: #556B2F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.bus-surveys button:hover {
+    background: #6B8E23;
+}
+
+.final-quote {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #6B8E23;
+}
+
+.final-quote .quote-content h2 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2.5em;
+    color: #556B2F;
+    margin-bottom: 20px;
+}
+
+.final-quote .quote-content p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.8em;
+    color: #4a4a4a;
+}

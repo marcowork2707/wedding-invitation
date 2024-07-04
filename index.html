@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <audio id="wedding-music" src="musica/JENNIFER RUSH - Si Tú Eres Mi Hombre y Yo Tu mujer - TVE - 1989.mp3" loop></audio>
+        <div class="intro" id="intro">
+            <h1>Nos casamos</h1>
+            <h2>Jose Maria</h2>
+            <h3>y</h3>
+            <h2>Sandra</h2>
+            <h4>05 de octubre 2024</h4>
+            <div class="quote">
+                <p>A veces lo que empieza como una locura</p>
+                <p>se convierte en lo mejor de tu vida.</p>
+                <span class="heart">&hearts;</span>
+            </div>
+            <div class="scroll-down">
+                <button class="scroll-button">
+                    <span>&#x2193;</span>
+                </button>
+                <p>Desliza hacia abajo</p>
+            </div>
+        </div>
+    </header>
+    <div class="invitation">
+        <div class="header">
+            <h1>¡Te invitamos a nuestra boda!</h1>
+        </div>
+        <div class="details">
+            <p>Fecha: 05 de Octubre de 2024</p>
+            <p>Ceremonia: 18:00 Parroquia de San Bartolomé Apostol</p>
+            <div class="map1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1568748.1182773206!2d-7.158663343749992!3d39.83028830000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40701b8f9dafde83%3A0xaa47e15b35c7ae6b!2sParroquia%20de%20San%20Bartolom%C3%A9%20Ap%C3%B3stol!5e0!3m2!1ses!2ses!4v1719915901578!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <p>Celebración: 20:00 en Finca Castillejo Alto</p>
+            <div class="map2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.2046436203404!2d-4.785040424100111!3d39.89205027152884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd401e24dc2dabd1%3A0x6aad017bcc582d06!2sCarril%20de%20Talavera%20de%20La%20Reina%2C%2045663%20Las%20Herencias%2C%20Toledo!5e0!3m2!1ses!2ses!4v1719916118947!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+        </div>
+        <p>Faltan</p>
+        <div id="countdown" class="countdown"></div>
+        <p>días para nuestra boda</p>
+        <div class="rsvp">
+            <h2>Confirma tu asistencia</h2>
+            <form id="rsvp-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Pon tu Nombre y Apellidos">
+                <label for="guests">Número de acompañantes:</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="no puedo asistir">No puedo asistir 🥺</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="music">
+            <h2>Lista de Canciones</h2>
+            <p><strong>¿Quieres añadir una canción a nuestra lista que sonará en la fiesta?</strong></p>
+            <ul id="song-list">
+                <!-- Lista de canciones aquí -->
+            </ul>
+            <input type="text" id="song-input" placeholder="Añade Nombre y Artista de la canción que más te guste">
+            <button id="add-song-button">Añadir Canción</button>
+        </div>
+        <div class="extra-info">
+            <h2>Información Adicional</h2>
+            <p><strong>Información de los novios:</strong></p>
+            <p>Novio: Jose Maria Lechiguero Madrid      | Tlf: 660 97 99 76</p>
+            <p>Novia: Sandra Muñoz Fernández            | Tlf: 696 82 81 56</p>
+            <p><strong>Padrinos:</strong></p>
+            <p>Padrino de la novia: Miguel A. Muñoz Fernández</p>
+            <p>Madrina del novio: Sonia Lechiguero Madrid</p>
+        </div>
+    </div>
+    <div class="bus-info folio">
+        <div class="bus-header">
+            <h2>Transporte en Autobús</h2>
+        </div>
+        <div class="bus-details">
+            <p>Queridos invitados, para su comodidad, hemos organizado un servicio de autobús que los llevará desde Talavera o Navalmoral a la Parroquia.</p>
+            <p>Además os llevará al lugar de la celebración después de la Ceremonia</p>
+            <p>Y también os llevará desde el lugar de la celebración a Navalmoral de vuelta</P>
+            <p><strong>HORARIOS</strong></p>
+            <p><strong>Ida a la Parroquia:</strong></p> 
+            <ul>
+                <li>Desde los Arcos de la Feria a las 17:00</li>
+                <li>Desde la Cruz de los Caidos a las 16:15</li>
+            </ul>
+            <p><strong>Vuelta a Navalmoral:</strong></p>
+            <ul>
+                <li>Desde Finca Castillejo Alto a las 04:30 / 05:00</li>
+            </ul>
+            <p><strong>Vuelta a Talavera:</strong></p>
+            <ul>
+                <li>Dispondremos de taxis para el regreso, olvidate de horarios ; ) </li>
+
+            <div class="bus-surveys">
+                <h3>Encuestas de Necesidad de Autobús</h3>
+                <form id="bus-survey-form">
+                    <label>¿Necesitas bus desde los Arcos de la Feria (Talavera de la Reina)?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="bus-talavera-si" name="bus-talavera" value="si" required>
+                        <label for="bus-talavera-si">Sí</label>
+                        <input type="radio" id="bus-talavera-no" name="bus-talavera" value="no">
+                        <label for="bus-talavera-no">No</label>
+                    </div>
+                    <label>¿Necesitas bus desde La Cruz de los Caidos (Navalmoral)?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="bus-navalmoral-si" name="bus-navalmoral" value="si" required>
+                        <label for="bus-navalmoral-si">Sí</label>
+                        <input type="radio" id="bus-navalmoral-no" name="bus-navalmoral" value="no">
+                        <label for="bus-navalmoral-no">No</label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-quote folio">
+        <div class="quote-content">
+            <h2>Gracias por compartir este día tan especial con nosotros.</h2>
+            <p>“El mejor momento para amar es siempre el ahora.”</p>
+            <div class="tenor-gif-embed" data-postid="10159440" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/hearts-gif-10159440">Hearts GIF</a>from <a href="https://tenor.com/search/hearts-gifs">Hearts GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+    </div>
+    
+    
+    
+    <script src="boda.js"></script>
+</body>
+</html>
